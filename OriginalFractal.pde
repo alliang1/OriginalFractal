@@ -1,4 +1,5 @@
 boolean hi = false;
+float rot = 0;
 public void setup() {
   size(600, 600);
 
@@ -12,14 +13,13 @@ text("Click for a surprise!",300,300);
   
 if (hi == true){
   
-
+rot = rot -0.0001;
 text("Will you be my valentine?",300,50);
-  translate(300, 300);
-  rotate(PI/6);
-  myFractal2(0, 0, 160);
-  rotate(-PI/6);
-  translate(-300, -300);
-  myFractal(300, 300, 150, 150);
+textSize(20);
+text("this hypnotizing rose will make you say yes",300,550);
+ 
+  myFractal2(0, 0, 150);
+  myFractal(0, 0, 150, 150);
 }
 }
 
@@ -33,7 +33,8 @@ public void myFractal(float x, float y, float siz, float col) {
   stroke(100, 1, 1);
   fill(col, 10, 10);
 
-
+translate(300,300);
+rotate(rot);
   ellipse(x+siz, y, siz, siz);
   ellipse(x+siz/1.5, y+siz/1.5, siz, siz);
   ellipse(x, y-siz, siz, siz);
@@ -42,6 +43,8 @@ public void myFractal(float x, float y, float siz, float col) {
   ellipse(x-siz/1.5, y+siz/1.5, siz, siz);
   ellipse(x-siz, y, siz, siz);
   ellipse(x+siz/1.5, y-siz/1.5, siz, siz);
+//rotate(rot);
+translate(-300,-300);
 
 
 
@@ -57,7 +60,8 @@ public void myFractal2(float x, float y, float siz) {
 
   fill(10, 70, 5);
 
-
+translate(300,300);
+rotate(rot);
   ellipse(x+siz, y, siz, siz);
   ellipse(x+siz/1.5, y+siz/1.5, siz, siz);
   ellipse(x, y-siz, siz, siz);
@@ -66,6 +70,7 @@ public void myFractal2(float x, float y, float siz) {
   ellipse(x-siz/1.5, y+siz/1.5, siz, siz);
   ellipse(x-siz, y, siz, siz);
   ellipse(x+siz/1.5, y-siz/1.5, siz, siz);
+  translate(-300,-300);
 
 
 
