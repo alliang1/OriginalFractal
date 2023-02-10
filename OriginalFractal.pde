@@ -14,9 +14,9 @@ text("Click for a surprise!",300,300);
 if (hi == true){
   
 rot = rot -0.0001;
-text("Will you be my valentine?",300,50);
+//text("Will you be my valentine?",300,50);
 textSize(20);
-text("this hypnotizing rose will make you say yes",300,550);
+//text("this hypnotizing rose will make you say yes",300,550);
  
   myFractal2(0, 0, 150);
   myFractal(0, 0, 150, 150);
